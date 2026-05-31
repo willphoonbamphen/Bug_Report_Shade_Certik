@@ -14,6 +14,9 @@
 The V3-prod WBTC Vault (`vault_id=9`) in Shade Lend has its collateral rebase `elastic` reduced to near-zero (2,097 base units = 0.00002097 BTC = $1.57) while carrying 37,867.68 SILK ($53,015) in outstanding debt. Approximately **0.835 BTC (~$62,369) of real Axelar-bridged Bitcoin is missing** from the vault. The pattern is identical to the first-depositor LP inflation bug (F1): a missing `MINIMUM_COLLATERAL` guard in the vault collateral rebase allows the first depositor to manipulate the `elastic/base` ratio to near-zero, stealing all collateral from subsequent depositors.
 
 ---
+## Affected Asset
+
+https://github.com/securesecrets/shadeswap/blob/main/contracts/amm_pair/src/operations.rs
 
 ## Affected Contract
 
