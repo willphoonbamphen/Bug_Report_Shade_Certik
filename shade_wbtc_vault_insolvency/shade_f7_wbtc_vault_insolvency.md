@@ -192,9 +192,3 @@ pub fn add_collateral(...) -> StdResult<Response> {
 Also add a guard in `liquidatable_positions` to handle `elastic == 0` gracefully (see F8).
 
 ---
-
-## Related Findings
-
-- **F1 (Critical, submitted):** Same missing minimum guard in ShadeSwap AMM LP token minting (`calculate_lp_tokens`)
-- **F6 (Medium):** V3-test "Not BTC Vault" has identical elastic/base manipulation (test tokens only)
-- **F8 (High):** Divide-by-zero in `liquidatable_positions` when `elastic ≈ 0` — makes this vault permanently unrecoverable
